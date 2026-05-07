@@ -1,0 +1,74 @@
+---
+import AppStoreButton from './AppStoreButton.astro';
+---
+
+<section class="relative flex min-h-screen items-center overflow-hidden pt-20">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-brand/5 via-surface to-brand/10"></div>
+  <div class="absolute top-1/4 -right-32 h-96 w-96 rounded-full bg-brand/10 blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-brand/5 blur-3xl"></div>
+
+  <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+    <!-- Text content -->
+    <div class="text-center lg:text-left">
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand/20 bg-brand/5 px-4 py-1.5 text-sm font-medium text-brand">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="currentColor"/></svg>
+        ProRAW Burst Camera
+      </div>
+
+      <h1 class="mb-6 text-4xl font-bold leading-tight tracking-tight text-text sm:text-5xl md:text-6xl">
+        The Perfect Frame,{' '}
+        <span class="text-brand">Every Time</span>
+      </h1>
+
+      <p class="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-text-muted lg:mx-0">
+        Continuous burst photography for iPhone. Capture the exact moment -- solo travel, group photos, and action shots. Up to 48MP ProRAW quality.
+      </p>
+
+      <div class="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
+        <AppStoreButton />
+        <span class="text-sm text-text-muted">$0.99 on the App Store</span>
+      </div>
+    </div>
+
+    <!-- iPhone mockup -->
+    <div class="flex justify-center lg:justify-end">
+      <div class="relative">
+        <!-- Glow effect -->
+        <div class="absolute inset-0 rounded-[48px] bg-gradient-to-b from-brand/30 to-brand/5 blur-2xl"></div>
+
+        <!-- iPhone frame -->
+        <div class="relative mx-auto w-[280px] rounded-[40px] border-[8px] border-gray-800 bg-gradient-to-b from-gray-900 to-gray-800 shadow-2xl sm:w-[300px]">
+          <!-- Notch -->
+          <div class="absolute top-0 left-1/2 z-10 h-[28px] w-[120px] -translate-x-1/2 rounded-b-2xl bg-gray-800"></div>
+
+          <!-- Screen content -->
+          <div class="flex aspect-[9/19.5] flex-col items-center justify-center rounded-[32px] bg-gradient-to-br from-brand/20 via-brand/10 to-orange-50 p-6">
+            <!-- Camera icon -->
+            <div class="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-brand/20">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8" stroke="#FF6B35" stroke-width="2"/>
+                <circle cx="12" cy="12" r="3" fill="#FF6B35"/>
+                <line x1="12" y1="2" x2="12" y2="5" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="19" x2="12" y2="22" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="2" y1="12" x2="5" y2="12" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="19" y1="12" x2="22" y2="12" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="text-center text-sm font-semibold text-brand">BuzzCam</p>
+            <p class="mt-1 text-center text-xs text-gray-500">Tap to start burst</p>
+
+            <!-- Simulated burst indicator -->
+            <div class="mt-6 flex gap-1.5">
+              <div class="h-1.5 w-1.5 rounded-full bg-brand"></div>
+              <div class="h-1.5 w-1.5 rounded-full bg-brand/70"></div>
+              <div class="h-1.5 w-1.5 rounded-full bg-brand/50"></div>
+              <div class="h-1.5 w-1.5 rounded-full bg-brand/30"></div>
+              <div class="h-1.5 w-1.5 rounded-full bg-brand/10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

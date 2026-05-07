@@ -1,0 +1,38 @@
+---
+import AppStoreButton from './AppStoreButton.astro';
+---
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center gap-2">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="8" stroke="white" stroke-width="2"/>
+          <circle cx="12" cy="12" r="3" fill="white"/>
+          <line x1="12" y1="2" x2="12" y2="5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="12" y1="19" x2="12" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="2" y1="12" x2="5" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="12" x2="22" y2="12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="text-xl font-bold text-text">BuzzCam</span>
+    </a>
+
+    <AppStoreButton class="scale-75 origin-right sm:scale-90" />
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('bg-surface/80', 'backdrop-blur-lg', 'shadow-sm');
+      } else {
+        header.classList.remove('bg-surface/80', 'backdrop-blur-lg', 'shadow-sm');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>

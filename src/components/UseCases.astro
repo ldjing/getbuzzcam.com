@@ -1,0 +1,45 @@
+---
+const useCases = [
+  {
+    emoji: '🤳',
+    title: 'Solo Travel & Self Portraits',
+    description: 'Set your phone on a tripod, start a timed burst, walk into the frame and move naturally. No running back and forth to press the shutter. With dozens of shots, there\'s always one where you look your best.',
+    gradient: 'from-blue-500/10 to-purple-500/10',
+  },
+  {
+    emoji: '👥',
+    title: 'Friends & Couples',
+    description: 'Not everyone is good at "the perfect click." Continuous burst gives you a much higher success rate -- later you can pick the shot where everyone looks great. No more awkward group photos.',
+    gradient: 'from-pink-500/10 to-rose-500/10',
+  },
+  {
+    emoji: '🏃',
+    title: 'Action Moments',
+    description: 'Jumping, turning, waving, hair flips, flowing skirts, kids running, pets looking up -- moments that are gone in a second. Burst is the most reliable way to catch them.',
+    gradient: 'from-brand/10 to-yellow-500/10',
+  },
+];
+---
+
+<section class="py-20 md:py-28" data-reveal>
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-16 text-center">
+      <h2 class="mb-4 text-3xl font-bold text-text md:text-4xl">
+        Built for Real Moments
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-text-muted">
+        BuzzCam is designed for the moments that matter most -- when timing is everything.
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-3">
+      {useCases.map((uc) => (
+        <div class={`group rounded-2xl bg-gradient-to-br ${uc.gradient} p-8 transition-all hover:shadow-lg hover:-translate-y-1`}>
+          <div class="mb-4 text-4xl">{uc.emoji}</div>
+          <h3 class="mb-3 text-xl font-semibold text-text">{uc.title}</h3>
+          <p class="text-sm leading-relaxed text-text-muted">{uc.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

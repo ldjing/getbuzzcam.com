@@ -1,0 +1,29 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<a
+  href="https://apps.apple.com/us/app/buzzcam-proraw-burst-camera/id6758300007"
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={['inline-block transition-transform hover:scale-105', className]}
+  aria-label="Download BuzzCam on the App Store"
+>
+  <svg height="48" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+    <rect width="200" height="60" rx="12" fill="#000" />
+    <g fill="#fff">
+      <text x="62" y="24" font-size="11" font-family="Inter, -apple-system, sans-serif" opacity="0.8">Download on the</text>
+      <text x="62" y="44" font-size="18" font-weight="600" font-family="Inter, -apple-system, sans-serif">App Store</text>
+    </g>
+    <g transform="translate(20, 14)" fill="#fff">
+      <path d="M16.5 2.5c-.4-1.1-1.3-1.5-2-1.5-.9 0-1.6.6-2 1.5L10.5 9h1.7l1.8-5.5c.2-.5.6-.8 1-.8.3 0 .7.2.9.7l1.8 5.5h1.7L16.5 2.5z" opacity="0"/>
+      <path d="M14.3 6.3l-3.8 6.6c-.4.7-.2 1.6.5 2 .2.1.5.2.7.2h7.6c.8 0 1.5-.7 1.5-1.5 0-.3-.1-.5-.2-.7l-3.8-6.6c-.4-.7-1.3-1-2-.6-.2.1-.4.3-.5.6z"/>
+      <path d="M9.5 8.5L5 16.3c-.4.7-.2 1.6.5 2 .2.1.5.2.7.2h4.5c.8 0 1.5-.7 1.5-1.5 0-.3-.1-.5-.2-.7L9.5 8.5z" opacity="0.7"/>
+      <circle cx="7" cy="5" r="3" opacity="0.5"/>
+    </g>
+  </svg>
+</a>
