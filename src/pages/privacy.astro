@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+const path = '/privacy/';
+---
+<Layout title="Privacy Policy | BuzzCam" description="BuzzCam works on your iPhone. No account, no data collection, no uploads, no ads or tracking SDKs. Photos permission is add-only." path={path}
+  breadcrumbs={[{ name: 'BuzzCam', path: '/' }, { name: 'Privacy Policy', path }]} campaign="privacy" alternates={[{ hreflang: 'en', path }]}>
+  <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
+    <h1 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">Privacy Policy</h1>
+    <p class="mt-3 text-mute-2">Effective January 26, 2026 · Updated <time datetime="2026-11-20">November 20, 2026</time></p>
+    <div class="prose-buzz mt-10">
+      <h2>Summary</h2>
+      <ul>
+        <li>BuzzCam (also shown as Buzz Cam, Buzz相机, Buzz相機, Buzzカメラ and Buzz 카메라) works <strong>on your device</strong>.</li>
+        <li>It needs <strong>Camera</strong> access to take photos and <strong>Photos (Add Only)</strong> access to save them.</li>
+        <li>No account. No uploads. No third-party ads, analytics or tracking SDKs.</li>
+        <li>Automatic Capture analyzes the live camera image <strong>on the iPhone</strong> to detect people, faces, smiles and gaze. Nothing is stored or sent anywhere, and BuzzCam does not identify who anyone is.</li>
+        <li>If you turn on <strong>Save Location</strong>, BuzzCam adds GPS metadata to the photos it saves. It is off by default.</li>
+      </ul>
+
+      <h2>Camera</h2>
+      <p>With Camera permission, BuzzCam shows the viewfinder and captures photos. It does not record audio or video.</p>
+
+      <h2>Automatic Capture (on-device detection)</h2>
+      <p>When you turn on Automatic Capture, BuzzCam uses Apple's on-device Vision framework to check camera frames for the condition you chose: a person in frame, a visible face, a smile, a face toward the camera, eyes toward the lens, the number of people, or a steady pose. Frames are analyzed in memory to decide when to press the shutter and are then discarded. No face data, templates or biometric identifiers are created, stored or transmitted.</p>
+
+      <h2>Photos (Add Only)</h2>
+      <p>With Photos permission set to Add Only, BuzzCam saves the photos you take to your photo library. It cannot browse or read your library. You manage saved photos in the Apple Photos app.</p>
+
+      <h2>Location (optional)</h2>
+      <p>If you enable Save Location in BuzzCam settings, iOS may ask for Location permission while you use the app, and BuzzCam attaches your location to the photos it saves. With Save Location off, no location is attached.</p>
+
+      <h2>Settings stored on your device</h2>
+      <p>BuzzCam keeps your camera preferences and a few local flags (for example, a one-time notice and counters used to decide when to show Apple's in-app review prompt) in the app's local storage. We do not receive this information.</p>
+
+      <h2>What BuzzCam does not do</h2>
+      <ul>
+        <li>No sign-in, profiles or accounts</li>
+        <li>No advertising networks</li>
+        <li>No third-party analytics or tracking SDKs</li>
+        <li>No selling of personal information</li>
+        <li>No uploading of photos or your library</li>
+      </ul>
+
+      <h2>Your controls</h2>
+      <ul>
+        <li>Camera: Settings → Privacy &amp; Security → Camera → BuzzCam</li>
+        <li>Photos: Settings → Privacy &amp; Security → Photos → BuzzCam</li>
+        <li>Location: Settings → Privacy &amp; Security → Location Services → BuzzCam</li>
+        <li>Location in photos: BuzzCam → Settings → Save Location</li>
+      </ul>
+      <p>Deleting the app removes its local settings. Photos you saved stay in Apple Photos until you delete them.</p>
+
+      <h2>This website</h2>
+      <p>getbuzzcam.com is a static site. It does not use cookies or advertising trackers. Our hosting provider may keep standard server logs (such as IP address and user agent) for security and reliability.</p>
+
+      <h2>Children</h2>
+      <p>BuzzCam is a general-audience app. Because it collects no data, we do not knowingly receive personal information from children.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we will update the date at the top of this page.</p>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:support@getbuzzcam.com">support@getbuzzcam.com</a>.</p>
+    </div>
+  </div>
+</Layout>

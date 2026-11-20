@@ -1,22 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import Features from '../components/Features.astro';
-import UseCases from '../components/UseCases.astro';
-import WhyBuzzCam from '../components/WhyBuzzCam.astro';
-import Privacy from '../components/Privacy.astro';
-import Footer from '../components/Footer.astro';
+import HomePage from '../components/HomePage.astro';
+import { en } from '../i18n/home/en';
 ---
-
-<Layout>
-  <Header />
-  <main>
-    <Hero />
-    <Features />
-    <UseCases />
-    <WhyBuzzCam />
-    <Privacy />
-  </main>
-  <Footer />
-</Layout>
+<HomePage locale="en" c={en} />

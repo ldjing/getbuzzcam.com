@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AppStoreBadge from '../components/AppStoreBadge.astro';
+const path = '/support/';
+const faq = [
+  { q: 'Where are my photos?', a: 'BuzzCam saves every photo to Apple Photos. Tap the thumbnail in the bottom-left corner of BuzzCam to open Photos. Large 48 MP or ProRAW photos can take a few seconds to appear.' },
+  { q: 'Automatic Capture is not taking photos', a: 'Make sure you tapped the shutter to start waiting (the screen shows “Waiting for conditions”). Check that enough people meet the condition: Minimum people counts only people who meet it. Keep faces reasonably large and well lit. “Looking at the lens” is less accurate with sunglasses, side profiles or long distances. With “Wait for a steady pose” on, keep your upper body in the frame. Some cameras or lenses may not support Automatic Capture; the app shows a notice.' },
+  { q: 'Automatic Capture does not detect my pet', a: 'Detection is for people only. For pets, use Burst at the Fastest interval or a Timed burst.' },
+  { q: 'Burst feels slow', a: 'Speed depends on the iPhone, resolution, format and processing. 48 MP and RAW/ProRAW files are large. Try 12 MP HEIF, a slower interval, Speed Priority (on supported devices), or free up storage. Let the iPhone cool down if it is warm.' },
+  { q: 'I can’t select 48 MP or ProRAW', a: 'These options appear only when your iPhone model and the selected lens support them.' },
+  { q: 'The camera view is black', a: 'Allow Camera access in Settings → Privacy & Security → Camera → BuzzCam, close other camera apps, and restart the iPhone if needed.' },
+  { q: 'Photos are not saving', a: 'Allow Photos access in Settings → Privacy & Security → Photos → BuzzCam, check free storage, then reopen the app.' },
+  { q: 'Location is not recorded', a: 'Turn on Save Location in BuzzCam settings and allow Location for BuzzCam in Settings → Privacy & Security → Location Services.' },
+  { q: 'How do I stop a burst?', a: 'Tap the shutter again. You can also set a maximum number of photos or a duration.' },
+  { q: 'Can I get a refund?', a: 'Purchases are handled by Apple. Request a refund at reportaproblem.apple.com.' },
+];
+const schema = [{ '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+---
+<Layout title="BuzzCam Support: Help, Troubleshooting & Contact" description="Help for BuzzCam on iPhone: where photos are saved, Automatic Capture tips, burst speed, 48 MP and ProRAW, permissions and how to contact support." path={path}
+  schema={schema} breadcrumbs={[{ name: 'BuzzCam', path: '/' }, { name: 'Support', path }]} campaign="support" alternates={[{ hreflang: 'en', path }]}>
+  <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
+    <h1 class="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">BuzzCam Support</h1>
+    <p class="mt-4 text-lg text-mute">Answers to common questions. Still stuck? Email <a class="text-buzz underline underline-offset-4" href="mailto:support@getbuzzcam.com">support@getbuzzcam.com</a> with your iPhone model, iOS version and what happened.</p>
+    <div class="mt-10 divide-y divide-line rounded-3xl border border-line bg-ink-2">
+      {faq.map((f) => (
+        <section class="p-6">
+          <h2 class="text-lg font-semibold text-white">{f.q}</h2>
+          <p class="mt-2 leading-relaxed text-mute">{f.a}</p>
+        </section>
+      ))}
+    </div>
+    <div class="prose-buzz mt-12">
+      <h2>Getting started</h2>
+      <ol>
+        <li>Open BuzzCam and allow Camera access.</li>
+        <li>Allow Photos (Add Only) so it can save your shots.</li>
+        <li>Choose Photo, Burst or Timed at the bottom, or tap the face icon for Automatic Capture.</li>
+        <li>Tap the shutter. In Burst and Timed, tap again to stop.</li>
+      </ol>
+      <h2>Requirements</h2>
+      <p>iPhone with iOS 26.2 or later. 48 MP, ProRAW, Telephoto and Countdown light depend on your model.</p>
+    </div>
+    <div class="mt-12"><AppStoreBadge campaign="support-page" /></div>
+  </div>
+</Layout>

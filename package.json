@@ -12,12 +12,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/inter": "^5.2.8",
+    "@astrojs/sitemap": "^3.7.6",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.2.2",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
+    "qrcode": "^1.5.4",
     "wrangler": "^4.88.0"
   }
 }
