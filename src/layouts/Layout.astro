@@ -140,6 +140,15 @@ const year = new Date().getFullYear();
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script is:inline>document.documentElement.classList.replace('no-js','js')</script>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Google Analytics 4 (property "BuzzCam Website") -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRGXG5JTZ7"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() { window.dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-TRGXG5JTZ7');
+    </script>
   </head>
   <body class="min-h-dvh pb-[76px] font-sans lg:pb-0">
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-buzz focus:px-4 focus:py-2 focus:text-ink">{t.skip}</a>
